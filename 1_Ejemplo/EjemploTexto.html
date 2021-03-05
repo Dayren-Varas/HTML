@@ -1,75 +1,140 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
-<!--fsdfsdf-->
+<!DOCTYPE html PUBLIC>
+<!--
+    Author: Varas Dayren Sarahi
+    Date: 03/032021
+-->
 
 <head>
   <title>Estructura de Texto</title>
   <link rel="stylesheet" type="text/css" href="/css/ejemplo.css" />
+  <!-- esta haciendo referencia a otro recurso
+  el link rel especifica la relación entre el documento actual y un recurso externo, 
+  el type (tipo) se refiere a una hoja texto que es de estilo
+  el href es hacia dónde esta apuntando-->>
   <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />  
+  <!-- Está haciendo referencia a un ícono-->
   <link rel="alternate" type="application/rss+xml" title="Resumen de todos los artículos del blog" href="/feed.xml" />
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="description" content="Ejemplo de XHTML y HTML5"/>
+  <!-- Las etiquetas meta hacen referencia a los metadatos que va a permitir que la página se indexe-->
+  <meta name="description" content="Ejemplo de HTML5"/>
   <meta name="keywords" content="HTML5, HTML, XHTML"/>
   <meta name="author" content="Dannas"/>
-  
-  <script type="text/javascript">
+  <!--Para motores de búsqueda-->
+  <!--OpenGraph-->
+  <meta poperty="og:title" content="Estructura de Datos"/>
+  <meta poperty="og:description" content="Ejemplo de HTML5"/>
+  <meta property="og:author" content="Dayren Sarav"/>
+  <!--El header sirve para las búsquedas en redes sociales-->
+
+  <script type="text/javascript"> 
     //<![CDATA[
       window.onload = function() { alert("La página se ha cargado exitosamente :)"); }
     //]]>
   </script>
-</head>
+  <!--Sirve para embeber código de java script y realizar algunas funciones
+  aquí cuando la ventana se cargué voy a mandar una alerta (alert)-->
+</head> <!--Se cierra la cabecera-->
 
-<body>
-<noscript>
+
+<body> <!--Empieza el cuerpo del documento-->
+<noscript> <!-- Solicita que actives java script
+  Si el browser identifica que esta bloqueado el java script no permite la función-->
   <p>Bienvenidos.</p>
+  <!--Es para escribir y dividir los parrafos no es obligatorio que se cierre-->
   <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
 Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo :)</p>
 </noscript>
-<img src="logotipo.gif" alt="Logotipo de esta página" />
-<ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a></li> 
-    <li><a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a></li>
+<img src="imagen.gif" alt="Logotipo de esta página" />
+<!--Son imagenes y src hace referencia a la imagen o dirección origen
+alt es el texto que se muestra si no esta disponible-->
+<ul type="square">
+<!--ul indica que hay una lista (no ordenada) de items-->
+    <li>
+    <!--El li hace referencia a un elemento o ítem de l lista-->
+      <a href="#" target="blank">Inicio</a></li>
+    <!--Cuando el ancla tiene # hace referencia al mismo documento 
+    target="blank" se refiere a abrir la página en otra ventana-->
+    <li>
+      <a href="ftp://ftp.ejemplo.com/ruta/archivo.zip" title="Archivo comprimido de los contenidos">Descarga un ZIP</a></li> 
+      <!--a es un ancla que crea un enlace a otras páginas de internet, archivos o ubicaciones en la misma página
+      si tiene -->
+    <li>
+      <a href="mailto:nombre@direccion.com?subject=Solicitud de más información">Solicitar Información</a></li>
+      <!--en esta ancla esta el protocolo mailto que abrirá algún software de manejo de correo y va a llenar 
+      una solicitud -->
   </ul>
-<hr/>
+<hr/> <!--Crea una línea para separar texto-->
 <h2>Lenguajes de marcado.</h2>
-<dl>
-  <dt>SGML</dt>
+<!--Indica títulos y subtitulos por orden de importancia-->
+<dl> <!--Crea una lista descriptiva
+un diccionario-->
+  <dt>SGML</dt> <!--Especifica un término-->
   <dd>Metalenguaje para la definición de otros lenguajes de marcado</dd>
+  <!--Deficinición de un término-->
  
   <dt>XML</dt>
   <dd>Lenguaje basado en SGML y que se emplea para describir datos</dd>
  
   <dt>RSS</dt>
+  <dd>Es un formato de estructuración de datos en XML que facilita el acceso automatizado a la 
+    información contenida en un sitio de Internet.</dd>
+
   <dt>GML</dt>
+  <dd>Es un lenguaje de marcado basado en XML para el modelaje, transporte y almacenamiento de información geográfica. </dd>
+  
   <dt>XHTML</dt>
+  <dd>Lenguaje empleado para generar documentos y contenidos de hipertexto generalmente publicados en la Web.</dd>
+  
   <dt>SVG</dt>
+  <dd>Es un formato de gráficos vectoriales bidimensionales, tanto estáticos como animados, en formato de lenguaje de marcado extensible XML</dd>
+  
   <dt>XUL</dt>
+  <dd>Lenguaje basado en XML para la interfaz de usuario</dd>
+
+  <br></br>
   <dd>Lenguajes derivados de XML para determinadas aplicaciones</dd>
 </dl>
-<hr/>
+<hr/> <!--Crea una línea para separar texto-->
 
 <h2>HTML</h2>
 
-<p>El lenguaje <acronym title="HyperText Markup Language"><strong><em>HTML</em></strong></acronym> es estandarizado 
-por el <acronym title="World Wide Web Consortium"><strong><em>W3C</em></strong></acronym>.</p>
+<p>El lenguaje <acronym title="HyperText Markup Language">
+                  <strong> <!--Pone texto en negritas-->
+                      <em>
+                        HTML
+                      </em>
+                  </strong>
+                </acronym> es estandarizado 
+por el <acronym title="World Wide Web Consortium"
+                  ><strong>
+                      <em>
+                        W3C
+                      </em>
+                  </strong>
+                </acronym>.</p>
+<!--acronym crea un acronimo y cuando se pasa por encima el mouse se ve la definición completa-->
+<!--em es para resaltar el texto
+i es para ponerlo en italica-->
 
 <h3>HTML 5</h3>
 <p><acronym title="HyperText Markup Language, versión 5"><strong><em>HTML5</em></strong></acronym> es la quinta revisión importante del lenguaje básico de la World Wide Web, HTML. HTML5 especifica dos variantes de sintaxis para HTML: un <em>«clásico»</em> HTML (text/html), la variante conocida como HTML5 y una variante XHTML conocida como sintaxis XHTML5 que deberá ser servida como XML.Esta es la primera vez que HTML y XHTML se han desarrollado en paralelo.</p>
 
 <p><code>&lt;section&gt;,&lt;nav&gt;,&lt;article&gt;,&lt;aside&gt;,&lt;footer&gt;,&lt;video&gt;,&lt;audio&gt;, entre otros.</code></p>
+<!--Code sirve para poner código y que no se interprete que aparezca tal cual-->
+<!--&lt; es < 
+  &gt; es > son picoparentesis-->
 
-<table align="center" border="3">
-<caption>Caractéres especiales</caption>
-<thead>
-<tr>
-	<th>Entidad</th>
+<table align="center" border="3"> <!--Para crear una tabla-->
+<caption>Caractéres especiales</caption> <!--titulo de la tabla-->
+<thead> <!--Contiene un bloque de filas-->
+<tr> <!--Encabezado del bloque-->
+	<th>Entidad</th> <!--Celdas de la tabla-->
 	<th>Carácter</th>
 	<th>Descripción</th>
 </tr>
 </thead>
-<tfoot>
+<tfoot> <!--Pie de la tabla-->
 <tr>
         <th>Entidad</th>
         <th>Carácter</th>
@@ -77,9 +142,9 @@ por el <acronym title="World Wide Web Consortium"><strong><em>W3C</em></strong><
 </tr>
 </tfoot>
 
-<tbody align="center">
+<tbody align="center"> <!--Cuerpo o contenido de la tabla-->
 <tr>
-	<td><pre>&amp;lt;</pre></td>
+	<td><pre>&amp;lt;</pre></td> <!--td es una celda con datos-->
 	<td>&lt;</td>
 	<td>less than</td>
 </tr>
@@ -152,7 +217,7 @@ El éxito de las .com dependía de webs más dinámicas (a veces llamadas Web 1.
 |________________________________________________|
 </pre>
 
-<img src="imagen.gif" usemap="#mapa_zonas" /> 
+<img src="imagen.gif" usemap="#mapa_zonas" /> <!--Para ir mapeando o mostrando ciertos cachos de una imagen -->
 <map name="mapa_zonas">
   <area shape="rect" coords="20,25,84,113" href="#" />
   <area shape="polygon" coords="90,25,162,26,163,96,89,25,90,24" href="#" />
